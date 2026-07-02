@@ -1,0 +1,13 @@
+import os
+MOCK_LLM_BASE_URL: str = os.getenv('MOCK_LLM_BASE_URL', 'http://127.0.0.1:8001')
+LLM_REQUEST_TIMEOUT: float = float(os.getenv('LLM_REQUEST_TIMEOUT', '5.0'))
+LLM_MAX_RETRIES: int = int(os.getenv('LLM_MAX_RETRIES', '3'))
+LLM_BACKOFF_BASE: float = float(os.getenv('LLM_BACKOFF_BASE', '0.5'))
+LLM_BACKOFF_JITTER: float = float(os.getenv('LLM_BACKOFF_JITTER', '0.2'))
+DEGRADED_THRESHOLD_SECONDS: float = float(os.getenv('DEGRADED_THRESHOLD_SECONDS', '30.0'))
+RATE_LIMIT_BUDGET: int = int(os.getenv('RATE_LIMIT_BUDGET', '10000'))
+RATE_LIMIT_WINDOW_SECONDS: int = int(os.getenv('RATE_LIMIT_WINDOW_SECONDS', '3600'))
+CACHE_TTL_SECONDS: int = int(os.getenv('CACHE_TTL_SECONDS', '300'))
+CACHE_HIT_THRESHOLD: float = float(os.getenv('CACHE_HIT_THRESHOLD', '0.80'))
+DEGRADED_CACHE_THRESHOLD: float = float(os.getenv('DEGRADED_CACHE_THRESHOLD', '0.50'))
+RECOVERY_PROBE_INTERVAL_SECONDS: int = int(os.getenv('RECOVERY_PROBE_INTERVAL_SECONDS', '10'))
